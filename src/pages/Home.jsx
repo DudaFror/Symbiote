@@ -9,67 +9,63 @@ import ProfileModal from "../components/ProfileModal";
 
 export default function Home() {
   const [profiles, setProfiles] = useState([]);
-  const [search, setSearch] = useState("");
-  const [area, setArea] = useState("");
-  const [cidade, setCidade] = useState("");
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedArea, setSelectedArea] = useState("Todos");
+  const [selectedLocation, setSelectedLocation] = useState("Todos");
   const [selectedProfile, setSelectedProfile] = useState(null);
 
-  // carregar perfis do JSON
   useEffect(() => {
     setProfiles(profilesData);
   }, []);
 
-  // filtrar lógica
   const filteredProfiles = profiles.filter((p) => {
     const matchesSearch =
-      p.nome.toLowerCase().includes(search.toLowerCase()) ||
-      p.cargo.toLowerCase().includes(search.toLowerCase()) ||
-      p.habilidadesTecnicas.some((h) =>
-        h.toLowerCase().includes(search.toLowerCase())
-      );
+      p.nome.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      p.cargo.toLowerCase().includes(searchTerm.toLowerCase());
 
-    const matchesArea = area ? p.area === area : true;
-    const matchesCidade = cidade ? p.localizacao === cidade : true;
+    const matchesArea =
+      selectedArea === "Todos" || p.area === selectedArea;
 
-    return matchesSearch && matchesArea && matchesCidade;
+    const matchesLocation =
+      selectedLocation === "Todos" || p.localizacao === selectedLocation;
+
+    return matchesSearch && matchesArea && matchesLocation;
   });
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
 
       <Header />
 
-      <main className="max-w-6xl mx-auto p-6">
+      <main className="max-w-6xl mx-auto px-4 py-10">
 
-        {/* BUSCA */}
-        <SearchBar search={search} setSearch={setSearch} />
+        <SearchBar value={searchTerm} onChange={setSearchTerm} />
 
-        {/* FILTROS */}
-        <div className="mt-6">
         <FilterBar
-            area={area}
-            setArea={setArea}
-            cidade={cidade}
-            setCidade={setCidade}
+          selectedArea={selectedArea}
+          onAreaChange={setSelectedArea}
+          selectedLocation={selectedLocation}
+          onLocationChange={setSelectedLocation}
         />
-        </div>
 
-        {/* LISTA DE PERFIS */}
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid gap-6 mt-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {filteredProfiles.map((profile) => (
             <ProfileCard
               key={profile.id}
               profile={profile}
-              openModal={setSelectedProfile}
+              openModal={() => setSelectedProfile(profile)}
             />
           ))}
         </div>
 
+        {selectedProfile && (
+          <ProfileModal
+            profile={selectedProfile}
+            closeModal={() => setSelectedProfile(null)}
+          />
+        )}
       </main>
-
-      {/* MODAL */}
-      <ProfileModal profile={selectedProfile} close={() => setSelectedProfile(null)} />
-
     </div>
   );
 }
