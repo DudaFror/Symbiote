@@ -46,12 +46,12 @@ export default function Home() {
 
         {/* FILTROS */}
         <div className="mt-6">
-          <FilterBar
+        <FilterBar
             area={area}
             setArea={setArea}
             cidade={cidade}
             setCidade={setCidade}
-          />
+        />
         </div>
 
         {/* LISTA DE PERFIS */}
