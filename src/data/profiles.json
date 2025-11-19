@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "nome": "Ana Beatriz Souza",
+    "foto": "https://i.pravatar.cc/150?img=1",
+    "cargo": "Desenvolvedora Front-End",
+    "resumo": "Especialista em interfaces modernas.",
+    "localizacao": "São Paulo/SP",
+    "area": "TI",
+    "habilidadesTecnicas": ["React", "Tailwind", "JavaScript"],
+    "softSkills": ["Comunicação", "Colaboração"],
+    "experiencias": [],
+    "formacao": [],
+    "projetos": [],
+    "certificacoes": ["PL-900"],
+    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
+    "areaInteresses": ["IA", "UI/UX"]
+  },
+  {
+    "id": 2,
+    "nome": "Marcos Vinícius Lima",
+    "foto": "https://i.pravatar.cc/150?img=2",
+    "cargo": "UX Designer",
+    "resumo": "Cria experiências intuitivas.",
+    "localizacao": "Campinas/SP",
+    "area": "Design",
+    "habilidadesTecnicas": ["Figma", "Prototipagem"],
+    "softSkills": ["Empatia", "Criatividade"],
+    "experiencias": [],
+    "formacao": [],
+    "projetos": [],
+    "certificacoes": [],
+    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
+    "areaInteresses": ["Psicologia do usuário"]
+  }
+]
