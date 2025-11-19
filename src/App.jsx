@@ -1,6 +1,11 @@
+import Header from "./components/Header";
 import Home from "./pages/Home";
-import "./index.css";
 
 export default function App() {
-  return <Home />;
+  return (
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-950 transition">
+      <Header />
+      <Home />
+    </div>
+  );
 }
