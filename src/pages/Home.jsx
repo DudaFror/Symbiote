@@ -9,7 +9,6 @@ import ProfileModal from "../components/ProfileModal";
 
 export default function Home() {
   const [profiles, setProfiles] = useState([]);
-
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedArea, setSelectedArea] = useState("Todos");
   const [selectedLocation, setSelectedLocation] = useState("Todos");
@@ -35,7 +34,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-
       <Header />
 
       <main className="max-w-6xl mx-auto px-4 py-10">
