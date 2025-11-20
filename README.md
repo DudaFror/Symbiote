@@ -1,16 +1,84 @@
-# React + Vite
+# 🌐 Symbiote — Plataforma de Perfis Profissionais Aumentados
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **Symbiote** é uma plataforma desenvolvida como trabalho acadêmico para as disciplinas de **Front-End Design** e **Web Development**.  
+A aplicação funciona como um “LinkedIn do futuro”, onde cada profissional exibe suas habilidades humanas, suas skills de IA, trilhas de aprendizado e projetos.  
+A interface permite busca, filtros, visualização detalhada, além de um modo claro e escuro.  
+Todos os dados são carregados a partir de um **JSON local**, contendo perfis simulados.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Resumo do Projeto
 
-## React Compiler
+A aplicação inclui:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Cards com informações básicas dos profissionais (nome, foto, cargo, skills)  
+- Busca inteligente (nome, cargo, tecnologias)  
+- Filtros (por área e localização)  
+- Modal completa com:
+  - Formação
+  - Experiências
+  - Soft Skills
+  - Projetos
+  - Idiomas
+  - Botões funcionais: **Recomendar** e **Enviar mensagem**
+- Dark Mode com persistência no navegador  
+- Dados carregados via JSON local  
+- Layout responsivo e moderno com TailwindCSS  
+- Estrutura SPA utilizando React + Vite
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔐 Usuários e Senhas
+
+Este projeto **não utiliza login**, portanto **não há usuários ou senhas** cadastrados.
+
+---
+
+## 🚀 Site no ar
+Link do Site: https://symbiote-ebon.vercel.app/
+
+## 📁 Repositório
+GitHub do projeto: https://github.com/DudaFror/Symbiote.git
+
+## 👥 Integrantes do Grupo
+Vinicius Mafra Paiva - 565916
+Kaike Correia de Sousa - 561623
+Eduarda de Castro Coutinho dos Santos - 562184
+
+## 🛠 Tecnologias Utilizadas
+- React
+- Vite
+- TailwindCSS
+- PostCSS
+- Lucide Icons
+- JavaScript (ES2023)
+- JSON Local
+- HTML5
+- CSS3
+
+## 📎 Estrutura do Projeto
+symbiote/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── data/
+│   ├── pages/
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── package.json
+├── tailwind.config.js
+├── postcss.config.js
+├── vite.config.js
+└── README.md
+
+## 🧩 Principais Funcionalidades
+✔️ Busca dinâmica por nome, cargo ou tecnologia
+✔️ Filtro por área de atuação
+✔️ Filtro por cidade
+✔️ Modal detalhado do perfil
+✔️ Layout 100% responsivo
+✔️ Dark Mode com persistência
+✔️ Dados estruturados em JSON (mínimo 60 perfis)
+✔️ Deploy via Vercel
