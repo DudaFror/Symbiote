@@ -37,13 +37,19 @@ Este projeto **não utiliza login**, portanto **não há usuários ou senhas** c
 ## 🚀 Site no ar
 Link do Site: https://symbiote-ebon.vercel.app/
 
+---
+
 ## 📁 Repositório
 GitHub do projeto: https://github.com/DudaFror/Symbiote.git
+
+---
 
 ## 👥 Integrantes do Grupo
 Vinicius Mafra Paiva - 565916
 Kaike Correia de Sousa - 561623
 Eduarda de Castro Coutinho dos Santos - 562184
+
+---
 
 ## 🛠 Tecnologias Utilizadas
 - React
@@ -55,6 +61,8 @@ Eduarda de Castro Coutinho dos Santos - 562184
 - JSON Local
 - HTML5
 - CSS3
+
+---
 
 ## 📎 Estrutura do Projeto
 symbiote/
@@ -72,6 +80,8 @@ symbiote/
 ├── postcss.config.js
 ├── vite.config.js
 └── README.md
+
+---
 
 ## 🧩 Principais Funcionalidades
 ✔️ Busca dinâmica por nome, cargo ou tecnologia
